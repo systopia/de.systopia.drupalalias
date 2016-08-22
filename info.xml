@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<extension key="de.systopia.drupalalias" type="module">
+  <file>drupalalias</file>
+  <name>Drupal Aliases</name>
+  <description>This extension replaces CiviCRM urls with their Drupal aliases.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>SYSTOPIA</author>
+    <email>endres@systopia.de</email>
+  </maintainer>
+  <releaseDate>2016-08-22</releaseDate>
+  <version>0.2</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>4.6</ver>
+  </compatibility>
+  <comments>Currently only active on: CRM/Campaign/Page/Petition/ThankYou.tpl</comments>
+  <civix>
+    <namespace>CRM/Drupalalias</namespace>
+  </civix>
+</extension>
