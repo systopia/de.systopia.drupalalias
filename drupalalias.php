@@ -40,10 +40,11 @@ function drupalalias_replace(&$content) {
 
 
 /**
- * Replace URLs in the outgoing emails
+ * We will provide our own Mailer (wrapping the original one).
+ * so we can replace all the URLs in outgoing emails
  */
-function drupalalias_civicrm_alterMailContent(&$content) {
-  drupalalias_replace($content);
+function drupalalias_civicrm_alterMailer(&$mailer, $driver, $params) {
+  $mailer = new CRM_Drupalalias_Mailer($mailer);
 }
 
 /**
