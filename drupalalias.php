@@ -51,7 +51,9 @@ function drupalalias_civicrm_alterMailer(&$mailer, $driver, $params) {
  * Replace URLs in the predefined page(s) / snippets
  */
 function drupalalias_civicrm_alterContent( &$content, $context, $tplName, &$object ) {
-  if ($tplName == 'CRM/Campaign/Page/Petition/ThankYou.tpl') {
+  if (   $tplName == 'CRM/Campaign/Page/Petition/ThankYou.tpl'
+      || $tplName == 'CRM/Campaign/Page/Petition/Confirm.tpl'
+      || $tplName == 'CRM/Campaign/Form/Petition/Signature.tpl') {
     drupalalias_replace($content);
   }
 }
